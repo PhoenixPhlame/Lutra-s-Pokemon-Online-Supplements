@@ -164,6 +164,11 @@
 		sys.webCall(construction.source + "scripts.js", "download4('start');");
 	}
 	,
+	
+	beforeChannelJoin: function(src, channel){
+	}
+	,
+	
 	afterNewMessage: function(message){
 		/* Script Update Script Load Check */
 		if (message === "Script Check: OK"){
@@ -171,6 +176,7 @@
 		}
 	}
 	,
+	
 	beforeChatMessage: function(src, message, channel){
 		/* Command Execution */
 		if (message[0] == "/" && message.length > 1){
